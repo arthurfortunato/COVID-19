@@ -8,7 +8,7 @@
 ## 💻 Projeto Desenvolvendo uma Progressive Web Application com React para mapear os dados do COVID19.
 <br>
 <p align="center">
- <img alt="Landing COVID19" src=".github/landing.gif" width="60%"> 
+ <img alt="Landing COVID19" src=".github/landing.gif" width="30%"> 
 </p>
 
 
