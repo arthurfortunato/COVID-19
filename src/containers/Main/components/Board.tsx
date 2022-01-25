@@ -6,7 +6,7 @@ import { IData } from '../../../common/types'
 function Board({ data }: any) {
   const { cases, todayDeaths, recovered, deaths, todayCases }: IData = data;
 
-  const getValue = (value: number) => value ? value.toLocaleString('pt-BR') : <Skeleton variant="text" width={222} height={60} />
+  const getValue = (value: number) => value ? value.toLocaleString('pt-BR') : <Skeleton variant="text" width={222} height={45} />
 
   return (
     <Grid container spacing={4}>

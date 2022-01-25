@@ -1,4 +1,7 @@
+import World from '../../assets/images/world.png';
+import ArgFlag from '../../assets/images/argentina.png';
 import BrazilFlag from '../../assets/images/brazil.png';
+import ChileFlag from '../../assets/images/chile.png';
 import ChinaFlag from '../../assets/images/china.png';
 import GermanyFlag from '../../assets/images/germany.png';
 import ItalyFlag from '../../assets/images/italy.png';
@@ -6,14 +9,29 @@ import UsaFlag from '../../assets/images/usa.png';
 
 const COUNTRIES = [
   {
+    label: 'Mundo',
+    value: 'world',
+    flag: World
+  },
+  {
     label: 'Alemanha',
     value: 'germany',
     flag: GermanyFlag
   },
   {
+    label: 'Argentina',
+    value: 'argentina',
+    flag: ArgFlag
+  },
+  {
     label: 'Brasil',
     value: 'brazil',
     flag: BrazilFlag
+  },
+  {
+    label: 'Chile',
+    value: 'chile',
+    flag: ChileFlag
   },
   {
     label: 'China',
