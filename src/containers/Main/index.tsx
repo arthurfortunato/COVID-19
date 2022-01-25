@@ -1,6 +1,10 @@
 import { useCallback, useEffect, useState } from 'react';
 import { api } from '../../services/api';
 
+import { 
+  Container
+} from './style'
+
 export const Main = () => {
   const [data, setData] = useState({});
   const [country, setCountry] = useState('brazil');
@@ -15,9 +19,11 @@ export const Main = () => {
   }, [getCovidData, country])
 
   return (
-    <div>
-
-    </div>
+    <Container>
+      <div className="mb-2">
+        
+      </div>
+    </Container>
   )
 }
 
