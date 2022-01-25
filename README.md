@@ -8,7 +8,7 @@
 ## 💻 Projeto Desenvolvendo uma Progressive Web Application com React para mapear os dados do COVID19.
 <br>
 <p align="center">
- <img alt="Landing COVID19" src=".github/landing.gif" width="70%"> 
+ <img alt="Landing COVID19" src=".github/landing.gif" width="60%"> 
 </p>
 
 
@@ -18,7 +18,6 @@ Esse projeto foi feito com as seguintes tecnologias:
 
 - [ReactJS](https://reactjs.org)
 - [TypeScript](https://www.typescriptlang.org/)
-- [NodeJS](https://nodejs.org/en/)
 - [Styled-Components](https://styled-components.com/)
 - [Material-UI](https://v4.mui.com/pt/)
 - [Axios](https://www.npmjs.com/package/axios)
