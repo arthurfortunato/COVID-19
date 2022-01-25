@@ -33,7 +33,7 @@ function Panel({ updateAt, onChange, data, country }: IPanel) {
   )
 
   const textCovid19 =
-    `País: ${country.toLocaleUpperCase()} -, 
+    `País: ${country.toLocaleUpperCase()} - 
      Total de Casos: ${cases},
      Recuperados: ${recovered},
      Total de Mortos: ${deaths},
