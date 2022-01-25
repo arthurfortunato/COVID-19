@@ -3,12 +3,13 @@ import api from '../../services/api';
 
 import Board from './components/Board';
 import Panel from './components/Panel';
+import { Footer } from '../../components/Footer';
 
-import {IData} from '../../common/types';
+import { IData } from '../../common/types';
 
 import {
-  Container
-} from './style'
+  ContainerStyled
+} from './style';
 
 export const Main = () => {
   const [data, setData] = useState<IData>({} as IData);
@@ -31,7 +32,7 @@ export const Main = () => {
   }
 
   return (
-    <Container>
+    <ContainerStyled>
       <div className="mb-2">
         <Panel
           data={data}
@@ -42,7 +43,8 @@ export const Main = () => {
         />
       </div>
       <Board data={data} />
-    </Container>
+      <Footer />
+    </ContainerStyled>
   )
 }
 
