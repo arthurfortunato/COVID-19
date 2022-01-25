@@ -1,5 +1,16 @@
 import axios from 'axios';
 
-export const api = axios.create({
-  baseURL: `https://coronavirus-19-api.herokuapp.com/countries`
+const api = axios.create({
+  baseURL: `https://coronavirus-19-api.herokuapp.com/countries`,
 })
+
+const headers = {
+  mode: 'cors',
+  cache: 'default'
+}
+
+async function getCountry(country: string) {
+  return api.get(country, {headers})
+}
+
+export default getCountry;
