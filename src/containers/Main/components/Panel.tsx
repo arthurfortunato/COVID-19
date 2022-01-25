@@ -4,7 +4,7 @@ import { Button, Card, Typography, Select, MenuItem } from '../../../components'
 import { CardPanelContentStyled, ItemStyled } from './style';
 import { IPanel, ICountry } from '../../../common/types';
 
-function Panel({ updateAt, onChange, data, country, getCovidData }: IPanel) {
+function Panel({ updateAt, onChange, data, country }: IPanel) {
   const { cases, recovered, deaths, todayCases, todayDeaths } = data
 
   function detectarMobile() {
@@ -33,12 +33,12 @@ function Panel({ updateAt, onChange, data, country, getCovidData }: IPanel) {
   )
 
   const textCovid19 =
-    `País: ${country} - 
+    `País: ${country.toUpperCase()} - 
      Total de Casos: ${cases},
      Recuperados: ${recovered},
      Total de Mortos: ${deaths},
      Casos Hoje: ${todayCases},
-     Mortes Hoje: ${todayDeaths}`
+     Mortes Hoje: ${todayDeaths} ☠️`
 
   const copyInfo = () => {
     navigator.clipboard.writeText(textCovid19)
@@ -46,15 +46,15 @@ function Panel({ updateAt, onChange, data, country, getCovidData }: IPanel) {
 
   const shareInfo = () => {
     navigator.share({
-      title: `Dados do Covid19 - ${country}`,
+      title: `Dados do Covid19 - ${country.toUpperCase()}`,
       text: textCovid19,
-      url: ''
+      url: 'https://covid-19-caseupdates.netlify.app/'
     })
   }
 
   const renderShareButton = (
     <div>
-      <Button variant="contained" color="primary" onClick={shareInfo}>
+      <Button size="small" variant="contained" color="primary" onClick={shareInfo}>
         Compartilhar
       </Button>
     </div>
@@ -73,8 +73,10 @@ function Panel({ updateAt, onChange, data, country, getCovidData }: IPanel) {
       <CardPanelContentStyled>
         <div>
           <Typography variant="h5" component="span" color="primary">COVID19</Typography>
-          <Typography variant="h6" component="span" color="primary">Painel Coronavírus</Typography>
-          <Typography variant="body2" component="span" color="primary">Atualizado em: {updateAt}</Typography>
+          <div>
+            <Typography variant="h6" component="span" color="primary">Painel Coronavírus </Typography>
+            <Typography variant="body2" component="span" color="primary">Atualizado em: <div>{updateAt}</div></Typography>
+          </div>
           <div className="pt-2">
             <Select
               onChange={(event) =>
