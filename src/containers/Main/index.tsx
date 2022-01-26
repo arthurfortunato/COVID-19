@@ -8,6 +8,7 @@ import { Footer } from '../../components/Footer';
 import { IData } from '../../common/types';
 
 import {
+  ContainerPanelStyled,
   ContainerStyled
 } from './style';
 
@@ -33,16 +34,18 @@ export const Main = () => {
 
   return (
     <ContainerStyled>
-      <div className="mb-2">
-        <Panel
-          data={data}
-          updateAt={updateAt}
-          onChange={handleChange}
-          country={country}
-          getCovidData={getCovidData}
-        />
-      </div>
-      <Board data={data} />
+      <ContainerPanelStyled>
+        <div className="mb-2">
+          <Panel
+            data={data}
+            updateAt={updateAt}
+            onChange={handleChange}
+            country={country}
+            getCovidData={getCovidData}
+          />
+        </div>
+        <Board data={data} />
+      </ContainerPanelStyled>
       <Footer />
     </ContainerStyled>
   )

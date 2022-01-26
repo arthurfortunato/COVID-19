@@ -1,8 +1,7 @@
 import { Grid, Skeleton } from '../../../components/index';
 import Card from './Card';
 
-import { IData } from '../../../common/types'
-import { Footer } from '../../../components/Footer';
+import { IData } from '../../../common/types';
 
 function Board({ data }: any) {
   const { cases, todayDeaths, recovered, deaths, todayCases }: IData = data;
